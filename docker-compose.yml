@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: traccar-api
+    image: node:18-alpine
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: node index.js
