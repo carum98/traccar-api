@@ -1,5 +1,5 @@
 const httpClient = require('../core/http-client')
-const Positions = require('../models/positions.model')
+const Positions = require('../models/positions')
 
 module.exports = {
     async get(req, res) {
