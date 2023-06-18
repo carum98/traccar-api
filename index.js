@@ -1,5 +1,5 @@
-const router = require('./src/router')
-const http = require('./src/http')
+const router = require('./src/core/router')
+const http = require('./src/core/http-client')
 const PORT = 3000
 
 const app = router()
@@ -14,7 +14,7 @@ app.get('/users/:id', (req, res) => {
 
 app.get('/position/:id', async (req, res) => {
     try {
-        const data = await http('positions', {
+        const data = await http('/positions', {
             deviceId: req.params.id
         })
     
