@@ -40,6 +40,12 @@ module.exports = function router() {
       res.end(message)
     }
 
+    res.error = (code, message) => {
+      res.statusCode = code
+      res.statusMessage = message
+      res.end(`${code} ${message}`)
+    }
+
     return res
   }
 
