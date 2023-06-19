@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/position/:id', Positions.get)
+app.get('/position/:id/html', Positions.html)
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
